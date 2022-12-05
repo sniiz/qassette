@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <body>
+        <div className="header-bar">
+          <h1
+            style={{
+              marginLeft: "20px",
+            }}
+            className="white"
+          >
+            qassette
+          </h1>
+          <code
+            className="mid version"
+            onClick={() => {
+              window
+                .open("https://github.com/sniiz/qassette", "_blank")
+                .focus();
+            }}
+          >
+            v0.0.0
+          </code>
+        </div>
+        <div className="input">
+          <input type="text" placeholder="enter a song name or a yt url" />
+          <div className="add-button">play</div>
+        </div>
+      </body>
+    </>
   );
 }
 

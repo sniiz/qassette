@@ -4,10 +4,11 @@
 body {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: column;
   background-color: black;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 h1 {
@@ -85,6 +86,48 @@ input::placeholder {
   box-shadow: currentColor 0px 0 30px;
 }
 
+.cassette-body {
+  margin-top: 20px;
+  background-color: transparent;
+  border: 2px solid #f3f2fa;
+  /* border-radius: 40px; */
+  width: 30vw;
+  height: 10vw;
+  display: flex;
+  padding: 10vw;
+  align-items: center;
+  justify-content: space-between;
+  /* max-height: 20vw; */
+}
+
+.cassette-rolls {
+  color: #f3f2fa;
+  width: 10vw;
+}
+
+.spinning {
+  animation: 3s infinite linear spin;
+  stroke-width: 1px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.control-button {
+  cursor: pointer;
+  width: 60px;
+  transition: all 0.15s ease-in;
+  color: #f3f2fa;
+}
+
+.control-button:hover {
+  color: #3df793;
+}
+
 .green {
   color: #3df793;
 }
@@ -95,4 +138,13 @@ input::placeholder {
 
 .mid {
   color: #6d6d6e;
+}
+
+@keyframes spin {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
 }
